@@ -148,6 +148,10 @@ public class ChatBot extends AppCompatActivity {
             addToChat("From a logical perspective, Database Management emerges as the most standarized subject", SENT_BY_BOT);
             return;
         }
+        if (containWord("vince", sentence)) {
+            addToChat("BOVO KA VINCENT BATUMBAKAL", SENT_BY_BOT);
+            return;
+        }
         addToChat("This question is beyond the limits of the app", SENT_BY_BOT);
 
 
