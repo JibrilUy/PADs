@@ -1,6 +1,7 @@
 package com.example.pads;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class AddData extends AppCompatActivity {
 
 
-    FloatingActionButton btnReturnToTableView;
+    FloatingActionButton btnReturnToTableView, btnChatBot;
     EditText editTextMonth, editTextNetIncome, editTextExpenses;
     Button btnAddDataAddTableActivity;
     String month;
@@ -65,7 +66,14 @@ public class AddData extends AppCompatActivity {
         });
 
 
-
+        btnChatBot = findViewById(R.id.btnChatBotAddData);
+        btnChatBot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddData.this, ChatBot.class);
+                startActivity(intent);
+            }
+        });
 
 
         btnReturnToTableView = findViewById(R.id.btnReturnToTableViewAddDataActivity);
